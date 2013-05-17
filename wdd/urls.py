@@ -9,7 +9,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     (r'^test_static/', TemplateView.as_view(template_name="test_static.html")),
     (r'^admin/', include(admin.site.urls)),
-
+    url(r'^', include('cms.urls')),
 )
 
 
